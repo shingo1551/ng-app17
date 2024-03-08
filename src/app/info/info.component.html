@@ -1,0 +1,10 @@
+<div class="game-info">
+  <div>{{game.status}}</div>
+  <ol>
+    @for (history of game.history; track history; let step = $index){
+    <li>
+      <button (click)="game.changeStep(step)">{{getDesc(step)}}</button>
+    </li>
+    }
+  </ol>
+</div>
